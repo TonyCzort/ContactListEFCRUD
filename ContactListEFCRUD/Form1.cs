@@ -40,7 +40,7 @@ namespace ContactListEFCRUD
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            model.Name = textName.Text.Trim();
+            model.FName2 = textName.Text.Trim();
             model.Surname = textSurname.Text.Trim();
             model.Company = textCompany.Text.Trim();
             model.Number = textNumber.Text.Trim();
@@ -76,7 +76,7 @@ namespace ContactListEFCRUD
                 using (DBEntities db = new DBEntities())
                 {
                     model = db.ContactList.Where(x => x.Id == model.Id).FirstOrDefault();
-                    textName.Text = model.Name;
+                    textName.Text = model.FName2;
                     textSurname.Text = model.Surname;
                     textCompany.Text = model.Company;
                     textNumber.Text = model.Number;

@@ -4,23 +4,22 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ContactListEFDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ContactListEFDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ContactList">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nchar" MaxLength="50" />
           <Property Name="Surname" Type="nchar" MaxLength="50" />
           <Property Name="Company" Type="nchar" MaxLength="50" />
           <Property Name="Number" Type="nchar" MaxLength="20" />
           <Property Name="Adress" Type="nchar" MaxLength="300" />
+          <Property Name="FName2" Type="nchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="ContactListEFDBModelStoreContainer">
           <EntitySet Name="ContactList" EntityType="Self.ContactList" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ContactListEFDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -29,7 +28,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="FName2" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Surname" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Company" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Number" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
@@ -47,8 +46,8 @@
           <EntitySetMapping Name="ContactList">
             <EntityTypeMapping TypeName="ContactListEFDBModel.ContactList">
               <MappingFragment StoreEntitySet="ContactList">
+                <ScalarProperty Name="FName2" ColumnName="FName2" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="Company" ColumnName="Company" />
                 <ScalarProperty Name="Number" ColumnName="Number" />
