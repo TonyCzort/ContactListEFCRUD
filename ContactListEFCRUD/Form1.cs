@@ -104,5 +104,13 @@ namespace ContactListEFCRUD
                 }
             }
         }
+
+        private void textSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (DBEntities db = new DBEntities())
+            {
+                dgvCustomer.DataSource = db.ContactList.Where(x => x.FName2.Contains(textSearch.Text) || x.Surname.Contains(textSearch.Text) || x.Company.Contains(textSearch.Text) || x.Number.Contains(textSearch.Text) || x.Adress.Contains(textSearch.Text)).ToList();
+            }
+        }
     }
 }

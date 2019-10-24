@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonSave = new System.Windows.Forms.Button();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,12 +49,8 @@
             this.textAdress = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textSearch = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,14 +78,14 @@
             this.Company,
             this.Number,
             this.Adress});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomer.Location = new System.Drawing.Point(300, 12);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.ReadOnly = true;
@@ -91,6 +93,51 @@
             this.dgvCustomer.Size = new System.Drawing.Size(1035, 299);
             this.dgvCustomer.TabIndex = 1;
             this.dgvCustomer.DoubleClick += new System.EventHandler(this.dgvCustomer_DoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // FName2
+            // 
+            this.FName2.DataPropertyName = "FName2";
+            this.FName2.HeaderText = "FName2";
+            this.FName2.Name = "FName2";
+            this.FName2.ReadOnly = true;
+            // 
+            // Surname
+            // 
+            this.Surname.DataPropertyName = "Surname";
+            this.Surname.HeaderText = "Surname";
+            this.Surname.Name = "Surname";
+            this.Surname.ReadOnly = true;
+            this.Surname.Width = 200;
+            // 
+            // Company
+            // 
+            this.Company.DataPropertyName = "Company";
+            this.Company.HeaderText = "Company";
+            this.Company.Name = "Company";
+            this.Company.ReadOnly = true;
+            // 
+            // Number
+            // 
+            this.Number.DataPropertyName = "Number";
+            this.Number.HeaderText = "Number";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            // 
+            // Adress
+            // 
+            this.Adress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Adress.DataPropertyName = "Adress";
+            this.Adress.HeaderText = "Adress";
+            this.Adress.Name = "Adress";
+            this.Adress.ReadOnly = true;
             // 
             // label1
             // 
@@ -208,50 +255,23 @@
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // Id
+            // textSearch
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.textSearch.Location = new System.Drawing.Point(139, 308);
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(137, 20);
+            this.textSearch.TabIndex = 4;
+            this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
             // 
-            // FName2
+            // label6
             // 
-            this.FName2.DataPropertyName = "FName2";
-            this.FName2.HeaderText = "FName2";
-            this.FName2.Name = "FName2";
-            this.FName2.ReadOnly = true;
-            // 
-            // Surname
-            // 
-            this.Surname.DataPropertyName = "Surname";
-            this.Surname.HeaderText = "Surname";
-            this.Surname.Name = "Surname";
-            this.Surname.ReadOnly = true;
-            this.Surname.Width = 200;
-            // 
-            // Company
-            // 
-            this.Company.DataPropertyName = "Company";
-            this.Company.HeaderText = "Company";
-            this.Company.Name = "Company";
-            this.Company.ReadOnly = true;
-            // 
-            // Number
-            // 
-            this.Number.DataPropertyName = "Number";
-            this.Number.HeaderText = "Number";
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
-            // 
-            // Adress
-            // 
-            this.Adress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Adress.DataPropertyName = "Adress";
-            this.Adress.HeaderText = "Adress";
-            this.Adress.Name = "Adress";
-            this.Adress.ReadOnly = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(54, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 17);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Search:";
             // 
             // Form1
             // 
@@ -259,11 +279,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1347, 364);
+            this.Controls.Add(this.textSearch);
             this.Controls.Add(this.textAdress);
             this.Controls.Add(this.textNumber);
             this.Controls.Add(this.textCompany);
             this.Controls.Add(this.textSurname);
             this.Controls.Add(this.textName);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -305,6 +327,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Company;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adress;
+        private System.Windows.Forms.TextBox textSearch;
+        private System.Windows.Forms.Label label6;
     }
 }
 
