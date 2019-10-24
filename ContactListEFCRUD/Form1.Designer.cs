@@ -43,6 +43,7 @@
             this.textAdress = new System.Windows.Forms.TextBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,7 @@
             this.dgvCustomer.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Name,
             this.Surname,
             this.Company,
@@ -86,7 +88,7 @@
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RowTemplate.Height = 30;
-            this.dgvCustomer.Size = new System.Drawing.Size(828, 307);
+            this.dgvCustomer.Size = new System.Drawing.Size(1035, 299);
             this.dgvCustomer.TabIndex = 1;
             this.dgvCustomer.DoubleClick += new System.EventHandler(this.dgvCustomer_DoubleClick);
             // 
@@ -206,12 +208,22 @@
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
             // Name
             // 
+            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Name.DataPropertyName = "Name";
             this.Name.HeaderText = "Name";
             this.Name.Name = "Name";
             this.Name.ReadOnly = true;
+            this.Name.Width = 200;
             // 
             // Surname
             // 
@@ -219,6 +231,7 @@
             this.Surname.HeaderText = "Surname";
             this.Surname.Name = "Surname";
             this.Surname.ReadOnly = true;
+            this.Surname.Width = 200;
             // 
             // Company
             // 
@@ -247,7 +260,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1186, 367);
+            this.ClientSize = new System.Drawing.Size(1347, 364);
             this.Controls.Add(this.textAdress);
             this.Controls.Add(this.textNumber);
             this.Controls.Add(this.textCompany);
@@ -262,7 +275,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonSave);
-            this.Name = "Form1";
+            this.Name.Name = "Form1";
             this.Text = "Contact List";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
@@ -287,6 +300,7 @@
         private System.Windows.Forms.TextBox textAdress;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Company;
